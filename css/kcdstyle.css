@@ -1,0 +1,113 @@
+/* CSS customization
+ */
+
+h1,h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+p, div {
+    font-family: 'Open Sans', sans-serif;
+}
+.offset-anchor {
+    position: absolute;
+    top: -60px;
+}
+.bg-dark {
+    background-color: #778899;
+}
+.bg-light {
+    background-color: rgba(255,255,255,0.2);
+}
+.shadow {
+    box-shadow: 4px 4px 8px;
+}
+//General styling
+html {
+    height: 100%;
+}
+body {
+    background-image: linear-gradient(to bottom right,#74396a,#5ca0c3);
+    background-size: cover;
+}
+.container {
+    box-shadow: 4px 4px 8px;
+}
+.navbar{
+    padding: 0px 15px;
+}
+.navbar-brand {
+    padding: 5px 15px;
+}
+.jumbotron {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.jumbotron > .container-fluid {
+    background-image: linear-gradient(to right,rgba(4,50,253,.05),rgba(4,50,253,.05)),url('../kcdentalphoto.jpg');
+    filter: contrast(180%);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: #eeeeee;
+    text-shadow: 1px 2px rgba(24,25,24,0.5);
+    padding: 400px 0;
+    margin-bottom: 30px
+}
+
+.aos{
+    padding-bottom: 50px;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+    margin: auto;
+}
+
+.carousel-control,
+.carousel{
+    background-image: none !important;
+    background-color: transparent;
+}
+
+#carousel-wrapper {
+    margin: 30px auto;
+    padding-left:0px;
+    padding-right: 0px;
+}
+.item {
+    padding: 16px;
+}
+.item>.image-responsive {
+    box-shadow: 8px 8px 8px;
+    border:solid #222 16px;
+}
+
+
+#officehours th{
+    padding: 7px 10px;
+    text-align: left;
+}
+#officehours td{
+    padding: 7px 10px;
+    text-align: right;
+}
+.map-responsive{
+    padding-top: 30px;
+    overflow:hidden;
+    padding-bottom:80.25%;
+    position:relative;
+    height:0;
+    margin-bottom:30px;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.foot {
+    text-align: center;
+    color: #9d9d9d;
+    padding-bottom: 50px;
+}
