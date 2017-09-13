@@ -21,7 +21,9 @@ p, div {
 .shadow {
     box-shadow: 4px 4px 8px;
 }
-
+.center-pills {
+    display: inline-block;
+}
 
 .purple-link,
 .purple-link:visited {
@@ -119,7 +121,7 @@ body {
 }
 .item>.image-responsive {
     box-shadow: 8px 8px 8px;
-    border:solid #222 16px;
+    border:solid rgba(255,255,255,0.8) 16px;
 }
 
 
