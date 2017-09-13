@@ -44,7 +44,7 @@ body {
 }
 
 .jumbotron > .container-fluid {
-    background-image: linear-gradient(to right,rgba(4,50,253,.05),rgba(4,50,253,.05)),url('../kcdentalphoto.jpg');
+    background-image: linear-gradient(to right,rgba(4,50,253,.05),rgba(4,50,253,.05)),url('../images/kcdentalphoto.jpg');
     filter: contrast(180%);
     background-size: cover;
     background-position: center center;
