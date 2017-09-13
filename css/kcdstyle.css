@@ -20,6 +20,27 @@ p, div {
 .shadow {
     box-shadow: 4px 4px 8px;
 }
+
+
+.purple-link,
+.purple-link:visited {
+    color: #74396a !important;
+    text-decoration: none !important;
+}
+
+a:active,
+a:focus,
+a:hover,
+a:visited {
+    text-decoration: none !important;
+}
+
+.btn-default, .btn-default:focus, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    background-color: #74396a;
+    border-color: #74396a;
+    color: #9d9d9d !important;
+}
+
 //General styling
 html {
     height: 100%;
@@ -54,9 +75,11 @@ body {
     padding: 400px 0;
     margin-bottom: 30px
 }
-
 .aos{
     padding-bottom: 50px;
+}
+.btn-wrapper {
+    padding:20px;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img{
