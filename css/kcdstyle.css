@@ -68,32 +68,38 @@ body {
 
 /* Styling for responsive image AND text scaling. Background image with position relative and height scaled to viewport with. Text is overlaid with hero-wrapper, position absolute. background position is set to focus on faces */
 
-.jumbotron {
+.jumbotron-kc {
     margin-top: 50px;
     margin-bottom: 0px;
     padding: 0px;
 }
-.jumbotron > .container-fluid {
-    background-image: linear-gradient(to right,rgba(4,50,253,.05),rgba(4,50,253,.05)),url('../images/kcdentalphoto.jpg');
+.jumbotron-kc > .container-fluid-kc {
+    background-image: url('../images/kcdentalphoto.jpg');
     filter: contrast(180%);
+    filter: brightness(95%);
     background-size: cover;
     background-position: 50% 15%;
     text-align: center;
     color:#eeeeee;
-    text-shadow: 1px 2px rgba(24,25,24,0.5);
+    text-shadow: 2px 2px rgba(24,25,24,0.75);
     height: 50vw;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero-text-wrapper {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .hero-text-wrapper h1 {
-    font-size: 5vw;
+    font-size: 7vw;
     white-space: nowrap;
 }
 .hero-text-wrapper h2 {
