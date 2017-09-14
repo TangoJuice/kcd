@@ -86,11 +86,11 @@ body {
 }
 .hero-text-wrapper {
     position: absolute;
-    bottom: 40%;
+    top: 60%;
     left: 50%;
-    -webkit-transform: translate(-50%,50%);
-    -ms-transform: translate(-50%,50%);
-    transform: translate(-50%,50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 }
 .hero-text-wrapper h1 {
     font-size: 5vw;
