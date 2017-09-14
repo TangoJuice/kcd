@@ -65,23 +65,40 @@ body {
 .navbar-brand {
     padding: 5px 15px;
 }
+
+/* Styling for responsive image AND text scaling. Background image with position relative and height scaled to viewport with. Text is overlaid with hero-wrapper, position absolute. background position is set to focus on faces */
+
 .jumbotron {
     margin-top: 50px;
     margin-bottom: 0px;
     padding: 0px;
 }
-
 .jumbotron > .container-fluid {
     background-image: linear-gradient(to right,rgba(4,50,253,.05),rgba(4,50,253,.05)),url('../images/kcdentalphoto.jpg');
     filter: contrast(180%);
     background-size: cover;
-    background-position: center center;
+    background-position: 50% 15%;
     text-align: center;
-    color: #eeeeee;
+    color:#eeeeee;
     text-shadow: 1px 2px rgba(24,25,24,0.5);
-    padding: 400px 0;
+    height: 50vw;
     margin-bottom: 30px
 }
+.hero-text-wrapper {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+.hero-text-wrapper h1 {
+    font-size: 5vw;
+    white-space: nowrap;
+}
+.hero-text-wrapper h2 {
+    font-size: 3vw;
+}
+/* end hero styling */
+
 .aos{
     padding-top: 20px;
     padding-bottom: 50px;
