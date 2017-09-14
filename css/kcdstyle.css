@@ -12,7 +12,8 @@ p, div {
     top: -60px;
 }
 .bg-dark {
-    background-color: #aabbcc;
+    background-color: beige;
+    //background-color: #aabbcc;
     //background-color: #778899;
 }
 .bg-light {
@@ -24,7 +25,9 @@ p, div {
 .center-pills {
     display: inline-block;
 }
-
+.container-first {
+    margin-top: 50px;
+}
 .purple-link,
 .purple-link:visited {
     color: #74396a !important;
@@ -49,7 +52,7 @@ html {
     height: 100%;
 }
 body {
-    background-image: linear-gradient(to bottom right,rgba(116,57,106,0.2),rgba(92,160,195,.2));
+//    background-image: linear-gradient(to bottom right,rgba(116,57,106,0.2),rgba(92,160,195,.2));
     background-size: cover;
     color:#1a1a1a;
 }
@@ -152,4 +155,8 @@ body {
     text-align: center;
     color: #222;
     padding-bottom: 50px;
+}
+.kc-footer {
+    background-color: #9d9d9d;
+    background-color: beige;
 }
