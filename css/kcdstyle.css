@@ -7,6 +7,9 @@ h1,h2, h3, h4, h5, h6 {
 p, div {
     font-family: 'Open Sans', sans-serif;
 }
+.anchor-wrapper{
+    padding:30px;
+}
 .offset-anchor {
     position: absolute;
     top: -60px;
@@ -20,7 +23,7 @@ p, div {
     background-color: rgba(255,255,255,0.4);
 }
 .shadow {
-    box-shadow: 4px 4px 8px;
+    box-shadow: 4px 4px 8px #c2c2a9;
 }
 .center-pills {
     display: inline-block;
@@ -28,10 +31,9 @@ p, div {
 .container-first {
     margin-top: 50px;
 }
-.purple-link,
-.purple-link:visited {
-    color: #74396a !important;
-    text-decoration: none !important;
+
+[class^='icon-'] {
+    color: #ac4c00;
 }
 
 a:active,
@@ -41,10 +43,15 @@ a:visited {
     text-decoration: none !important;
 }
 
-.btn-default, .btn-default:focus, .btn-default:hover, .btn-default:active, .btn-default:visited {
-    background-color: #74396a;
-    border-color: #74396a;
+.btn-theme, .btn-theme:focus, .btn-theme:hover, .btn-theme:active, .btn-theme:visited {
+    background-color: #3a65b7;
+    border-color: #3a65b7;
     color: #fafafa !important;
+}
+
+.btn-theme:hover, .btn-theme:focus {
+    background-color: #073284;
+    border-color: #073284;
 }
 
 //General styling
@@ -57,10 +64,13 @@ body {
     color:#1a1a1a;
 }
 .container {
-    box-shadow: 4px 4px 8px;
+    box-shadow: 4px 4px 8px #c2c2a9;
 }
 .navbar{
     padding: 0px 15px;
+}
+.navbar-default {
+    background-color: beige;
 }
 .navbar-brand {
     padding: 5px 15px;
@@ -80,7 +90,7 @@ body {
     background-size: cover;
     background-position: 50% 15%;
     text-align: center;
-    color:#eeeeee;
+    color:beige;
     text-shadow: 2px 2px rgba(24,25,24,0.75);
     height: 50vw;
     margin-bottom: 30px;
@@ -130,9 +140,12 @@ body {
 .btn-wrapper{
     padding: 20px;
 }
+
+/* office tour */
+
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img{
-    margin: auto;
+   margin: auto;
 }
 
 .carousel-control,
@@ -141,28 +154,21 @@ body {
     background-color: transparent;
 }
 
-#carousel-wrapper {
+.carousel-wrapper {
     margin: 30px auto;
     padding-left:0px;
     padding-right: 0px;
 }
+
 .item {
-    padding: 16px;
+    padding: 20px;
 }
-.item>.image-responsive {
-    box-shadow: 8px 8px 8px;
-    border:solid rgba(255,255,255,0.8) 16px;
-}
+.item > img {
+    box-shadow: 8px 8px 8px #c2c2a9;
+    border:solid rgba(255,255,255,0.8) 12px;
+/*
 
-
-#officehours th{
-    padding: 7px 10px;
-    text-align: left;
-}
-#officehours td{
-    padding: 7px 10px;
-    text-align: right;
-}
+/*map */
 .map-responsive{
     padding-top: 30px;
     overflow:hidden;
@@ -177,6 +183,16 @@ body {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+/* footer */
+#officehours th{
+    padding: 7px 10px;
+    text-align: left;
+}
+#officehours td{
+    padding: 7px 10px;
+    text-align: right;
 }
 .foot {
     text-align: center;
