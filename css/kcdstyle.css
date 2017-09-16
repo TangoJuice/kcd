@@ -32,7 +32,7 @@ p, div {
     margin-top: 50px;
 }
 
-[class^='icon-'] {
+[class*='col-'] [class^='icon-'] {
     color: #ac4c00;
 }
 
@@ -75,7 +75,9 @@ body {
 .navbar-brand {
     padding: 5px 15px;
 }
-
+.container-fluid {
+    padding: 0px;
+}
 /* Styling for responsive image AND text scaling. Background image with position relative and height scaled to viewport with. Text is overlaid with hero-wrapper, position absolute. background position is set to focus on faces */
 
 .jumbotron-kc {
@@ -93,7 +95,6 @@ body {
     color:beige;
     text-shadow: 2px 2px rgba(24,25,24,0.75);
     height: 50vw;
-    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -142,33 +143,53 @@ body {
 }
 
 /* office tour */
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img{
-   margin: auto;
+blockquote {
+        border: none;
+}
+#testimonial-carousel {
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    padding: 0;
+}
+#testimonial-carousel .carousel-cell{
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(58,101,183,0.25),white,rgba(58,101,183,0.25));
+    text-align: center;
+    height: 100%;
+    padding: 20px 0;
+}
+#carousel-office-tour {
+    padding: 50px 0;
+    overflow: hidden;
 }
 
-.carousel-control,
-.carousel{
-    background-image: none !important;
-    background-color: transparent;
+#carousel-office-tour .flickity-viewport {
+    overflow: visible;
 }
 
-.carousel-wrapper {
-    margin: 30px auto;
-    padding-left:0px;
-    padding-right: 0px;
+#carousel-office-tour .carousel-cell.is-selected img {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 10px 10px 20px #c2c2a9;
+  z-index: 10;
 }
 
-.item {
-    padding: 20px;
+#carousel-office-tour .carousel-cell:not(.is-selected) img {
+    filter: blur(5px) brightness(30%) saturate(200% )grayscale(60%);
+    overflow: hidden;
 }
-.item > img {
-    box-shadow: 8px 8px 8px #c2c2a9;
-    border:solid rgba(255,255,255,0.8) 12px;
-/*
 
-/*map */
+/* map */
+
 .map-responsive{
     padding-top: 30px;
     overflow:hidden;
