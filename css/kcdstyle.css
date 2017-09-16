@@ -36,6 +36,12 @@ p, div {
     color: #ac4c00;
 }
 
+.bg-team {
+    //    background-color: #f8982a;
+    //    background-color: rgba(248,152,42,0.5);
+    background-color: rgba(58,101,183,0.2);
+}
+
 a:active,
 a:focus,
 a:hover,
@@ -62,6 +68,7 @@ body {
 //    background-image: linear-gradient(to bottom right,rgba(116,57,106,0.2),rgba(92,160,195,.2));
     background-size: cover;
     color:#1a1a1a;
+    position: relative;
 }
 .container {
     box-shadow: 4px 4px 8px #c2c2a9;
@@ -154,7 +161,8 @@ blockquote {
 }
 #testimonial-carousel .carousel-cell{
     width: 100%;
-    background-image: linear-gradient(to right, rgba(58,101,183,0.2),white 25%,white 75%,rgba(58,101,183,0.2));
+    //    background-image: linear-gradient(to right, rgba(58,101,183,0.2),white 25%,white 75%,rgba(58,101,183,0.2));
+    background-color: rgba(58,101,183,0.2);
     text-align: center;
     height: 100%;
     padding: 20px 0;
@@ -235,4 +243,102 @@ blockquote {
 .kc-footer {
     background-color: #9d9d9d;
     background-color: beige;
+}
+
+/**** css for team page ***/
+/*dentist carousel*/
+.carousel-dentists {
+    width: 75%;
+    margin: auto;
+}
+.carousel-staff {
+    width: 75%;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 640px) {
+    .carousel-dentists,
+    .carousel-staff {
+    width: 100%;
+    }
+}
+
+.carousel-dentists .carousel-cell,
+.carousel-staff .carousel-cell {
+    margin: 20px;
+}
+.carousel-staff .carousel-cell {
+    margin: 20px;
+}
+
+.carousel-dentists .carousel-cell:not(.is-selected) img,
+.carousel-staff .carousel-cell:not(.is-selected) img {
+    filter: blur(2px) brightness(70%) grayscale(100%);
+    overflow: hidden;
+}
+
+
+.carousel-dentists-bio {
+   width: 100%
+}
+.carousel-dentists-bio .carousel-cell{
+   width: 100%
+}
+
+.carousel-caption {
+    padding: 0;
+   bottom: 0;
+}
+
+/* Go to Top
+-------------------------------------------------------*/
+#back-to-top {
+  display: block;
+  z-index: 100;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  font-size: 24px;
+  position: fixed;
+    bottom: 20px;
+//  bottom: -34px;
+  right: 20px;
+  line-height: 35px;
+  background-color: rgba(41, 43, 50, 0.3);
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#back-to-top i {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top a {
+  display: block;
+  color: #fff;
+}
+
+#back-to-top.show {
+  bottom: 20px;
+}
+
+#back-to-top:hover {
+    background-color: rgba(58,101,183,0.8);
+    //background-color: #b09980;
+  bottom: 24px;
+}
+
+#back-to-top:hover i {
+  color: #fff;
+  text-decoration: none;
 }

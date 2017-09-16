@@ -20,6 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans" rel="stylesheet">
     <link href="css/icomoon.css" rel="stylesheet">
+    <link href="css/flickity.min.css" rel="stylesheet">
     <link href="css/kcdstyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,7 +58,7 @@
 
     <!--page contents-->
 
-    <div class="container text-center bg-dark" role="navigation" style="margin-top:50px;">
+    <div class="container-fluid text-center bg-team" role="navigation" style="margin-top:50px;">
       <h1>Meet the KC Dental team!</h1>
       <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe972;" class="icon-users"></span></h2>
       <ul class="nav nav-pills center-pills">
@@ -68,414 +69,345 @@
 
     <div class="tab-content">
       <div id="dentists" class="tab-pane active">
-
         <!-- Dentist Carousel -->
-        <div id="dentist-carousel-wrapper" class="container bg-light" style="margin-bottom:30px">
-          <div class="col-xs-12" style="padding:30px">
-            <h4 class="text-center">Our friendly dentists are ready to treat you!</h4>
-            <!--carousel for photos-->
-            <div id="carousel-dentists" class="carousel slide" data-ride="carousel" data-interval="false">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-dentists" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-dentists" data-slide-to="1"></li>
-                <li data-target="#carousel-dentists" data-slide-to="2"></li>
-                <li data-target="#carousel-dentists" data-slide-to="3"></li>
-                <li data-target="#carousel-dentists" data-slide-to="4"></li>
-                <li data-target="#carousel-dentists" data-slide-to="5"></li>
-              </ol>
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="...">
-                  <div class="carousel-caption">
-                    <h4>Dr. Chen</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#chen">Bio</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="...">
-                  <div class="carousel-caption">
-                    <h4>Dr. Wilson</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#wilson">Bio</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="...">
-                  <div class="carousel-caption">
-                    <h4>Dr. Fu</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#fu">Bio</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="...">
-                  <div class="carousel-caption">
-                    <h4>Dr. Gupta</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#gupta">Bio</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="...">
-                  <div class="carousel-caption">
-                    <h4>Dr. Hansen</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#hansen">Bio</button>
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="img-responsive" src="http://via.placeholder.com/450x450" alt="">
-                  <div class="carousel-caption">
-                    <h4>Dr. Burden</h4>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#burden">Bio</button>
-                  </div>
-                </div>
-              </div> <!--end carousel inner-->
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-dentists" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#carousel-dentists" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+        <div id="dentist-carousel-wrapper" class="container-fluid bg-light" style="margin-bottom:30px">
+          <h4 class="text-center">Our friendly dentists are ready to treat you!</h4>
+          <!--carousel for photos-->
+          <div class="carousel-dentists" data-flickity='{ "wrapAround": true, "autoPlay": false, "pageDots": false, "prevNextButtons": true, "sync": ".carousel-dentists-bio", "asNavFor": ".carousel-dentists-bio" }'>
+            <!-- Slides -->
+            <div class="carousel-cell">
+              <img  src="images/chen.jpg" alt="...">
+              <div class="carousel-caption">
+                <h4>Dr. Chen</h4>
+              </div>
             </div>
-          </div>  <!--end carousel-->
-        </div>
-      </div>          <!--end container for carousel-->
+            <div class="carousel-cell">
+              <img src="images/wilson.jpg" alt="...">
+              <div class="carousel-caption">
+                <h4>Dr. Wilson</h4>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="images/fu.jpg" alt="...">
+              <div class="carousel-caption">
+                <h4>Dr. Fu</h4>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="images/gupta.jpg" alt="...">
+              <div class="carousel-caption">
+                <h4>Dr. Gupta</h4>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="images/hansen.jpg" alt="...">
+              <div class="carousel-caption">
+                <h4>Dr. Hansen</h4>
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img src="images/burden.jpg" alt="">
+              <div class="carousel-caption">
+                <h4>Dr. Burden</h4>
+              </div>
+            </div>
+          </div> <!--end flickity carousel-->
+        </div> <!-- end carousel wrapper -->
+
+        <div id="dentists-bio-carousel-wrapper" class="container bg-dark" style="margin-bottom:30px"> <!--bio carousel-->
+          <div class="carousel-dentists-bio"  data-flickity='{ "wrapAround": true, "autoPlay": false, "pageDots": false, "prevNextButtons": false }'>
+            <!--chen-->
+            <div id="chen" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. Kyleen Chen</h4>
+                  <ul>
+                    <li><p>Graduated UT Austin in 1994 with a Bachelor of Art degree in Biology</p></li>
+                    <li><p>Earned D.D.S. from Baylor College of Dentistry, Dallas, TX, in 1998</p></li>
+                    <li><p>Following dental school, worked one year as a dentist in Austin</p></li>
+                    <li><p>Moved to and stayed in California from 2000 to 2005</p></li>
+                    <li><p> While in California, worked as an associate dentist in both family and childrens dentistry. Also, was active volunteering in underprivileged communities, promoting dental hygiene education and participated as a lecturer in dental assistant accreditation program.</p></li>
+                    <li><p>Returned to Austin Texas in 2006 to establish KC Dental.</p></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-books"></span></h2>
+                  <h4 class="text-center">Accreditation and Certification:</h4>
+                  <ul>
+                    <li><p>Endodontic Continuum at UCLA 2004</p></li>
+                    <li><p>Aesthetic (Cosmetic dentistry) Continuum at UCLA 2006</p></li>
+                    <li><p>Nitrous Oxide Sedation</p></li>
+                    <li><p>Dental Implant Restoration</p></li>
+                    <li><p>Certified 3M Mini Implant Dentist</p></li>
+                    <li><p>Invisalign certified dentist provider</p></li>
+                    <li><p>Completed over 150 CE hours of Straight Wire Orthodontics</p></li>
+                  </ul>
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4 class="text-center">Professional Memberships:</h4>
+                  <ul>
+                    <li><p>Member, American Orthodontic Society</p></li>
+                    <li><p>Member, American Dental Association</p></li>
+                    <li><p>Member, Texas Dental Association</p></li>
+                    <li><p>Member, Capital Area Dental Society</p></li>
+                    <li><p>Member, Academy of General Dentistry</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--chen-->
+            <!--wilson-->
+            <div id="wilson" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. Court Wilson</h4>
+                  <ul>
+                    <li><p>Graduated from the University of Houston in 2000 with a Bachelor of Science degree in Biology</p></li>
+                    <li><p>Earned D.D.S. from the University of Texas Health Science Center San Antonio in 2008</p></li>
+                    <li><p>Completed a 1 year GPR (general pracice residency) at the University of Texas Health Science Center San Antonio in 2009. In the residency, Dr. Wilson: extracted wisdom teeth, performed molar endodontics, performed IV sedation, treated medically complex patients, placed implants, restored implants, and practiced cosmetic dentistry. Dr. Wilson was on call for the University Hospital in San Antonio where he would treat facial swellings and trauma to the oral/facial structures.</p></li>
+                    <li><p>Dr. Wilson moved to Austin in 2009 and is active in many dental societies. Dr. Wilson enjoys continuing education, and he is pursuing the Fellowship in the Academy of General Dentistry.</p></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-books"></span></h2>
+                  <h4 class="text-center">Accreditation and Certification</h4>
+                  <ul>
+                    <li><p>GPR from the UT Health Science Center San Antonio</p></li>
+                    <li><p>Aesthetic Dentristry completion of C.O.R.E. philosophy 2009</p></li>
+                    <li><p>IV / Oral conscious sedation and Nitrous Oxide certified</p></li>
+                    <li><p>ACLS certified</p></li>
+                    <li><p>Invisalign certified dentist provider</p></li>
+                    <li><p>Completed over 400 hours CE</p></li>
+                  </ul>
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4>Professional Memberships:</h4>
+                  <ul>
+                    <li><p>Member, American Dental Association</p></li>
+                    <li><p>Member, Texas Dental Association</p></li>
+                    <li><p>Member, Capitol Area Dental Society</p></li>
+                    <li><p>Member, Academy of General Dentistry</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--wilson-->
+            <!--fu-->
+            <div id="fu" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. Jennifer Fu</h4>
+                  <ul>
+                    <li><p>Graduated with highest honors from the University of Texas at Austin with a Bachelor of Business Administration</p></li>
+                    <li><p>Earned D.D.S. from the University of Texas Health Science Center in San Antonio in 2009 and graduated in the top 10 of her dental class. Dr. Fu also received the Women's Faculty Leadership Award in 2009 for her contributions to the dental school</p></li>
+                    <li><p>Dr. Fu then moved to Austin, where she continues to volunteer in the community. She enjoys working with children and adults and believes in providing gentle dental care to all patients.</p></li>
+                    <li><p>Dr. Fu's hobbies include baking, watching movies and swimming.</p></li>
+                    <li><p>Dr. Fu can speak Mandarin Chinese and a little Spanish.</p></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-books"></span></h2>
+                  <h4 class="text-center">Accreditation and Certification</h4>
+                  <ul>
+                    <li><p>Enteral (oral conscious) sedation certified</p></li>
+                    <li><p>Nitrous oxide sedation certified</p></li>
+                    <li><p>Invisalign certified dentist provider</p></li>
+                  </ul>
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4 class="text-center">Professional Memberships:</h4>
+                  <ul>
+                    <li><p>Member, Omicron Kappa Upsilon National Dental Honor Society</p></li>
+                    <li><p>Member, American Dental Association</p></li>
+                    <li><p>Member, Texas Dental Association</p></li>
+                    <li><p>Member, Capital Area Dental Society</p></li>
+                    <li><p>Member, Women of Austin Dental Study Club</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--fu-->
+            <!--gupta-->
+            <div id="gupta" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. Sid Gupta</h4>
+                  <ul>
+                    <li><p>Obtained his dental degree from Manipal College of Dental Surgery, India, in 2002</p></li>
+                    <li><p>Two years of advanced research at the State University of New York, Stony Brook in Oral Biology and Pathology understanding the factors which cause periodontal disease (gum disease)</p></li>
+                    <li><p>Attended the University of Texas Dental Branch at Houston for his Master's and specialist training in Periodontics and Implant dentistry. He has extensive surgical experience in placing implants and other advanced surgical techniques. He also provides various sedation dentistry techniques for anxious patients including enteral (oral) and IV sedation</p></li>
+                    <li><p>Dr. Gupta, his wife, and a son, currently live in Northwest Austin</p></li>
+                    <li><p>Dr. Gupta joined KC Dental in October 2008</p></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-books"></span></h2>
+                  <h4 class="text-center">Accreditation and Certification</h4>
+                  <ul>
+                    <li><p>Board Certified Periodontist - Specializing in Periodontal Surgery and Implants</p></li>
+                    <li><p>Diplomate of the American Board of Periodontology</p></li>
+                    <li><p>Nitrous Oxide Sedation</p></li>
+                    <li><p>Enteral (oral) Sedation</p></li>
+                    <li><p>IV Sedation</p></li>
+                  </ul>
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4 class="text-center">Professional Memberships:</h4>
+                  <ul>
+                    <li><p>Member, American Academy of Periodontology (AAP)</p></li>
+                    <li><p>Member, Greater Houston Society of Periodontists (GHSP)</p></li>
+                    <li><p>Member, Greater Houston Dental society (GHDS)</p></li>
+                    <li><p>Member, American Dental Association (ADA)</p></li>
+                    <li><p>Member, Southwest society of Periodontists (SWSP)</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--gupta-->
+            <!--hansen-->
+            <div id="hansen" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. Steven Hansen</h4>
+                  <ul>
+                    <li><p>Graduated U.C.L.A in 1976 with a Bachelor's Degree</p></li>
+                    <li><p>Attended U.S.C. Dental School on a full scholarship, earning his D.D.S in 1980</p></li>
+                    <li><p>Following his certification, Dr. Hansen practiced general dentistry for the United States Air Force for 11 years</p></li>
+                    <li><p>In 1991, attained his Certification of Endodontic from Wilford Hall Medical Center, San Antonio</p></li>
+                    <li><p>Served as Chairman of the Endodontic Dept. at Wilford Hall Medical Center, Air Force's premier medical and dental center</p></li>
+                    <li><p>Held positions as Program Director for the graduate Endodontic Residency Program</p></li>
+                    <li><p>Engaged as Special Consultant to the Surgeon General in Endodontics</p></li>
+                    <li><p>Following his military retirement, He served on the Board of Directors for the Alameda Dental Society</p></li>
+                    <li><p>Dr. Hansen is Board Certified by the American Board of Endodontics, has held clinical faculty positions at the University of Texas and has authored / co-authored numerous scientific publications.</p></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-books"></span></h2>
+                  <h4 class="text-center">Accreditation and Certification</h4>
+                  <ul>
+                    <li><p>Board Certified Endodontics - Specializing in Endodontics</p></li>
+                    <li><p>Diplomate, American Board of Endodontics</p></li>
+                    <li><p>Nitrous Oxide Sedation</p></li>
+                    <li><p>Enteral (oral) Sedation</p></li>
+                  </ul>
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4 class="text-center">Professional Memberships:</h4>
+                  <ul>
+                    <li><p>Member, American Dental Association</p></li>
+                    <li><p>Member, Texas Dental Association</p></li>
+                    <li><p>Member, Capitol Area Dental Society</p></li>
+                    <li><p>Member, American Association of Endodontists</p></li>
+                    <li><p>Member, Omicron Kappa Upsilon National Dental Honors Society</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--hansen-->
+            <!--burden-->
+            <div id="burden" class="carousel-cell" role="dialog">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe925;" class="icon-profile"></span></h2>
+                  <h4 class="text-center">Dr. David Burden</h4>
+                  <p>Dr. David Burden graduated from the University of Texas Health Science Center in San Antonio. He completed his undergraduate studies at Texas A&M University in 2001, where he received his B.S. in Genetics. Dr. Burden also completed a one-year advanced education in general dentistry residency at University of Texas Health Science Center in San Antonio, where he received training in IV sedation and advanced training in oral surgery.</p>
+                </div>
+                <div class="col-md-6">
+                  <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe921;" class="icon-library"></span></h2>
+                  <h4 class="text-center">Professional Memberships:</h4>
+                  <p>Dr. Burden is affiliated with:</p>
+                  <ul>
+                    <li><p>American Dental Association</p></li>
+                    <li><p>American Dental Society of Anesthesiology</p></li>
+                    <li><p>American Association of Hospital Dentistry</p></li>
+                    <li><p>Special Care Dentistry</p></li>
+                    <li><p>Texas Dental Association</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--burden-->
+          </div><!--end bio carousel-->
+        </div><!--end biography wrapper container-->
+      </div> <!--end tab-pane dentists -->
 
       <div id="staff" class="tab-pane">
         <!-- Staff Carousel -->
-        <div id="staff-carousel-wrapper" class="container bg-light">
-          <div class="col-xs-12" style="padding:30px">
-            <h4 class="text-center">Say hello to our helpful staff!</h4>
-            <!--carousel for photos-->
-            <div id="carousel-staff" class="carousel slide" data-ride="carousel" data-interval="false">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-staff" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-staff" data-slide-to="1"></li>
-                <li data-target="#carousel-staff" data-slide-to="2"></li>
-                <li data-target="#carousel-staff" data-slide-to="3"></li>
-                <li data-target="#carousel-staff" data-slide-to="4"></li>
-                <li data-target="#carousel-staff" data-slide-to="5"></li>
-                <li data-target="#carousel-staff" data-slide-to="6"></li>
-                <li data-target="#carousel-staff" data-slide-to="7"></li>
-                <li data-target="#carousel-staff" data-slide-to="8"></li>
-                <li data-target="#carousel-staff" data-slide-to="9"></li>
-              </ol>
+        <div id="staff-carousel-wrapper" class="container-fluid bg-light">
+          <h4 class="text-center">Say hello to our helpful staff!</h4>
+          <!--carousel for photos-->
+          <div class="carousel-staff"
+               data-flickity='{
+               "wrapAround": true,
+               "autoPlay": false,
+               "pageDots": false,
+               "prevNextButtons": true }'>
+            <!-- Slides -->
+            <div class="carousel-cell">
+              <img  src="images/lisa.jpg" alt="...">
+              <div class="carousel-caption">
+                Lisa
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/cambria.jpg" alt="...">
+              <div class="carousel-caption">
+                Cambria
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/Dani.jpg" alt="...">
+              <div class="carousel-caption">
+                Dani
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/dione.jpg" alt="...">
+              <div class="carousel-caption">
+                Dione
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/Elissa.jpg" alt="...">
+              <div class="carousel-caption">
+                Elissa
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/Madison.jpg" alt="...">
+              <div class="carousel-caption">
+                Madison
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/lin.jpg" alt="...">
+              <div class="carousel-caption">
+                Lin
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/brittney.jpg" alt="...">
+              <div class="carousel-caption">
+                Brittney
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/monica.jpg" alt="...">
+              <div class="carousel-caption">
+                Monica
+              </div>
+            </div>
+            <div class="carousel-cell">
+              <img  src="images/Jade.jpg" alt="...">
+              <div class="carousel-caption">
+                Jade
+              </div>
+            </div><!--end slides -->
+          </div>  <!--end carousel-->
+        </div> <!--end carousel wrapper -->
+      </div> <!-- end tab pane staff-->
+    </div> <!--end tab content-->
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img class="image-responsive" src="images/lisa.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Lisa
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/cambria.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Cambria
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/Dani.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Dani
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/dione.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Dione
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/Elissa.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Elissa
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/Madison.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Madison
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/lin.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Lin
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/brittney.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Brittney
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/monica.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Monica
-                  </div>
-                </div>
-                <div class="item">
-                  <img class="image-responsive" src="images/Jade.jpg" alt="...">
-                  <div class="carousel-caption">
-                    Jade
-                  </div>
-                </div>
-              </div> <!--end carousel inner-->
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-staff" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#carousel-staff" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>  <!--end carousel-->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--area for bio-->
-    <div class="container">
-      <!--chen-->
-      <div id="chen" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. Kyleen Chen</h4>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><p>Graduated UT Austin in 1994 with a Bachelor of Art degree in Biology</p></li>
-                <li><p>Earned D.D.S. from Baylor College of Dentistry, Dallas, TX, in 1998</p></li>
-                <li><p>Following dental school, worked one year as a dentist in Austin</p></li>
-                <li><p>Moved to and stayed in California from 2000 to 2005</p></li>
-                <li><p> While in California, worked as an associate dentist in both family and childrens dentistry. Also, was active volunteering in underprivileged communities, promoting dental hygiene education and participated as a lecturer in dental assistant accreditation program.</p></li>
-                <li><p>Returned to Austin Texas in 2006 to establish KC Dental.</p></li>
-              </ul>
-              <h4 class="text-center">Accreditation and Certification:</h4>
-              <ul>
-                <li><p>Endodontic Continuum at UCLA 2004</p></li>
-                <li><p>Aesthetic (Cosmetic dentistry) Continuum at UCLA 2006</p></li>
-                <li><p>Nitrous Oxide Sedation</p></li>
-                <li><p>Dental Implant Restoration</p></li>
-                <li><p>Certified 3M Mini Implant Dentist</p></li>
-                <li><p>Invisalign certified dentist provider</p></li>
-                <li><p>Completed over 150 CE hours of Straight Wire Orthodontics</p></li>
-              </ul>
-              <h4 class="text-center">Professional Memberships:</h4>
-              <ul>
-                <li><p>Member, American Orthodontic Society</p></li>
-                <li><p>Member, American Dental Association</p></li>
-                <li><p>Member, Texas Dental Association</p></li>
-                <li><p>Member, Capital Area Dental Society</p></li>
-                <li><p>Member, Academy of General Dentistry</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--chen-->
-      <!--wilson-->
-      <div id="wilson" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. Court Wilson</h4>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><p>Graduated from the University of Houston in 2000 with a Bachelor of Science degree in Biology</p></li>
-                <li><p>Earned D.D.S. from the University of Texas Health Science Center San Antonio in 2008</p></li>
-                <li><p>Completed a 1 year GPR (general pracice residency) at the University of Texas Health Science Center San Antonio in 2009. In the residency, Dr. Wilson: extracted wisdom teeth, performed molar endodontics, performed IV sedation, treated medically complex patients, placed implants, restored implants, and practiced cosmetic dentistry. Dr. Wilson was on call for the University Hospital in San Antonio where he would treat facial swellings and trauma to the oral/facial structures.</p></li>
-                <li><p>Dr. Wilson moved to Austin in 2009 and is active in many dental societies. Dr. Wilson enjoys continuing education, and he is pursuing the Fellowship in the Academy of General Dentistry.</p></li>
-              </ul>
-              <h4 class="text-center">Accreditation and Certification</h4>
-              <ul>
-                <li><p>GPR from the UT Health Science Center San Antonio</p></li>
-                <li><p>Aesthetic Dentristry completion of C.O.R.E. philosophy 2009</p></li>
-                <li><p>IV / Oral conscious sedation and Nitrous Oxide certified</p></li>
-                <li><p>ACLS certified</p></li>
-                <li><p>Invisalign certified dentist provider</p></li>
-                <li><p>Completed over 400 hours CE</p></li>
-              </ul>
-              <h4>Professional Memberships:</h4>
-              <ul>
-                <li><p>Member, American Dental Association</p></li>
-                <li><p>Member, Texas Dental Association</p></li>
-                <li><p>Member, Capitol Area Dental Society</p></li>
-                <li><p>Member, Academy of General Dentistry</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--wilson-->
-      <!--fu-->
-      <div id="fu" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. Jennifer Fu</h4>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><p>Graduated with highest honors from the University of Texas at Austin with a Bachelor of Business Administration</p></li>
-                <li><p>Earned D.D.S. from the University of Texas Health Science Center in San Antonio in 2009 and graduated in the top 10 of her dental class. Dr. Fu also received the Women's Faculty Leadership Award in 2009 for her contributions to the dental school</p></li>
-                <li><p>Dr. Fu then moved to Austin, where she continues to volunteer in the community. She enjoys working with children and adults and believes in providing gentle dental care to all patients.</p></li>
-                <li><p>Dr. Fu's hobbies include baking, watching movies and swimming.</p></li>
-                <li><p>Dr. Fu can speak Mandarin Chinese and a little Spanish.</p></li>
-              </ul>
-              <h4 class="text-center">Accreditation and Certification</h4>
-              <ul>
-                <li><p>Enteral (oral conscious) sedation certified</p></li>
-                <li><p>Nitrous oxide sedation certified</p></li>
-                <li><p>Invisalign certified dentist provider</p></li>
-              </ul>
-              <h4 class="text-center">Professional Memberships:</h4>
-              <ul>
-                <li><p>Member, Omicron Kappa Upsilon National Dental Honor Society</p></li>
-                <li><p>Member, American Dental Association</p></li>
-                <li><p>Member, Texas Dental Association</p></li>
-                <li><p>Member, Capital Area Dental Society</p></li>
-                <li><p>Member, Women of Austin Dental Study Club</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--fu-->
-      <!--gupta-->
-      <div id="gupta" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. Sid Gupta</h4>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><p>Obtained his dental degree from Manipal College of Dental Surgery, India, in 2002</p></li>
-                <li><p>Two years of advanced research at the State University of New York, Stony Brook in Oral Biology and Pathology understanding the factors which cause periodontal disease (gum disease)</p></li>
-                <li><p>Attended the University of Texas Dental Branch at Houston for his Master's and specialist training in Periodontics and Implant dentistry. He has extensive surgical experience in placing implants and other advanced surgical techniques. He also provides various sedation dentistry techniques for anxious patients including enteral (oral) and IV sedation</p></li>
-                <li><p>Dr. Gupta, his wife, and a son, currently live in Northwest Austin</p></li>
-                <li><p>Dr. Gupta joined KC Dental in October 2008</p></li>
-              </ul>
-              <h4 class="text-center">Accreditation and Certification</h4>
-              <ul>
-                <li><p>Board Certified Periodontist - Specializing in Periodontal Surgery and Implants</p></li>
-                <li><p>Diplomate of the American Board of Periodontology</p></li>
-                <li><p>Nitrous Oxide Sedation</p></li>
-                <li><p>Enteral (oral) Sedation</p></li>
-                <li><p>IV Sedation</p></li>
-              </ul>
-              <h4 class="text-center">Professional Memberships:</h4>
-              <ul>
-                <li><p>Member, American Academy of Periodontology (AAP)</p></li>
-                <li><p>Member, Greater Houston Society of Periodontists (GHSP)</p></li>
-                <li><p>Member, Greater Houston Dental society (GHDS)</p></li>
-                <li><p>Member, American Dental Association (ADA)</p></li>
-                <li><p>Member, Southwest society of Periodontists (SWSP)</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--gupta-->
-      <!--hansen-->
-      <div id="hansen" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. Steven Hansen</h4>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><p>Graduated U.C.L.A in 1976 with a Bachelor's Degree</p></li>
-                <li><p>Attended U.S.C. Dental School on a full scholarship, earning his D.D.S in 1980</p></li>
-                <li><p>Following his certification, Dr. Hansen practiced general dentistry for the United States Air Force for 11 years</p></li>
-                <li><p>In 1991, attained his Certification of Endodontic from Wilford Hall Medical Center, San Antonio</p></li>
-                <li><p>Served as Chairman of the Endodontic Dept. at Wilford Hall Medical Center, Air Force's premier medical and dental center</p></li>
-                <li><p>Held positions as Program Director for the graduate Endodontic Residency Program</p></li>
-                <li><p>Engaged as Special Consultant to the Surgeon General in Endodontics</p></li>
-                <li><p>Following his military retirement, He served on the Board of Directors for the Alameda Dental Society</p></li>
-                <li><p>Dr. Hansen is Board Certified by the American Board of Endodontics, has held clinical faculty positions at the University of Texas and has authored / co-authored numerous scientific publications.</p></li>
-              </ul>
-              <h4 class="text-center">Accreditation and Certification</h4>
-              <ul>
-                <li><p>Board Certified Endodontics - Specializing in Endodontics</p></li>
-                <li><p>Diplomate, American Board of Endodontics</p></li>
-                <li><p>Nitrous Oxide Sedation</p></li>
-                <li><p>Enteral (oral) Sedation</p></li>
-              </ul>
-              <h4 class="text-center">Professional Memberships:</h4>
-              <ul>
-                <li><p>Member, American Dental Association</p></li>
-                <li><p>Member, Texas Dental Association</p></li>
-                <li><p>Member, Capitol Area Dental Society</p></li>
-                <li><p>Member, American Association of Endodontists</p></li>
-                <li><p>Member, Omicron Kappa Upsilon National Dental Honors Society</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--hansen-->
-      <!--burden-->
-      <div id="burden" class="modal" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Dr. David Burden</h4>
-            </div>
-            <div class="modal-body">
-              <p>Dr. David Burden graduated from the University of Texas Health Science Center in San Antonio. He completed his undergraduate studies at Texas A&M University in 2001, where he received his B.S. in Genetics. Dr. Burden also completed a one-year advanced education in general dentistry residency at University of Texas Health Science Center in San Antonio, where he received training in IV sedation and advanced training in oral surgery.</p>
-              <h4 class="text-center">Professional Memberships:</h4>
-              <p>Dr. Burden is affiliated with:</p>
-              <ul>
-                <li><p>American Dental Association</p></li>
-                <li><p>American Dental Society of Anesthesiology</p></li>
-                <li><p>American Association of Hospital Dentistry</p></li>
-                <li><p>Special Care Dentistry</p></li>
-                <li><p>Texas Dental Association</p></li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-btn-primary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--burden-->
-    </div>
-    <!--end biography container-->
 
     <!-- end page contents-->
 
@@ -519,5 +451,16 @@
     <script> window.jQuery || document.write("<script src='js/bootstrap.js'><\/script>")</script>
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
+      <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+      <script type="text/javascript" src="js/flickity-sync.js"></script>
+      <script type="text/javascript">
+        $("document").ready(function() {
+        $("a").on('shown.bs.tab', function() {
+        $(".carousel-staff").flickity('resize');
+        });
+        });
+
+
+      </script>
   </body>
 </html>

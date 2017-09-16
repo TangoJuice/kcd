@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#KCDentalNavbar" data-offset="10">
 
     <!-- begin top navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,7 +46,7 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
+            <li class="active"><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
             <li><a class="page-scroll" href="#aboutus" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
             <li><a class="page-scroll" href="#ouroffice" data-toggle="collapse" data-target=".navbar-collapse.in">Our Office</a></li>
             <li><a class="page-scroll" href="#services" data-toggle="collapse" data-target=".navbar-collapse.in">Services</a></li>
@@ -139,7 +139,7 @@
           <span id="services" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe9e9;" class="icon-grin"></span></h2>
           <h2 class="text-center">Services</h2>
-          <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patient to travel to different offices to receive their dental treatment.</p>
+          <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patients to travel to different offices to receive their dental treatment.</p>
           <p>Our office utilizes the latest technologies and techniques to ensure we provide the best family, cosmetic, and specialty dentistry services in the Northwest Austin area.</p>
           <div class="btn-wrapper-fake">
             <a class="btn btn-theme" href="#" role="button">View Services</a>
@@ -334,6 +334,11 @@
         </div>
       </div>
     </div> <!-- container  -->
+
+    <div id="back-to-top">
+      <a href="#top"><i aria-hidden="true" data-icon="&#xea41;" class="icon-circle-up"></i></a>
+    </div>
+
     <!-- Bootstrap core JavaScript
          ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -342,6 +347,38 @@
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
       <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+      <script type="text/javascript">
+        (function($){
 
+        (function() {
+    var docElem = document.documentElement,
+      didScroll = false;
+      document.querySelector( '#back-to-top' );
+    function init() {
+      window.addEventListener( 'scroll', function() {
+        if( !didScroll ) {
+          didScroll = true;
+          setTimeout( scrollPage, 50 );
+        }
+      }, false );
+    }
+  });
+
+  function scrollToTop() {
+    var scroll = $(window).scrollTop();
+    var $backToTop = $("#back-to-top");
+    if (scroll >= 50) {
+      $backToTop.addClass("show");
+    } else {
+      $backToTop.removeClass("show");
+    }
+  }
+
+  $('a[href="#top"]').on('click',function(){
+    $('html, body').animate({scrollTop: 0}, 1350, "easeInOutQuint");
+    return false;
+  });
+        })(jQuery);
+        </script>
   </body>
 </html>
