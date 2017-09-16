@@ -149,15 +149,27 @@ blockquote {
 #testimonial-carousel {
     margin: 0;
     width: 100%;
-    height: 150px;
+    height: 250px;
     padding: 0;
 }
 #testimonial-carousel .carousel-cell{
     width: 100%;
-    background-image: linear-gradient(to right, rgba(58,101,183,0.25),white,rgba(58,101,183,0.25));
+    background-image: linear-gradient(to right, rgba(58,101,183,0.25),white 33%,white 66%,rgba(58,101,183,0.25));
     text-align: center;
     height: 100%;
     padding: 20px 0;
+}
+#testimonial-carousel .carousel-quote {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 481px) {
+    #testimonial-carousel blockquote {
+        font-size:14px;
+    }
 }
 #carousel-office-tour {
     padding: 50px 0;
