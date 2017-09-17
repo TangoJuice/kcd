@@ -29,7 +29,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll" data-target="#KCDentalNavbar" data-offset="10">
+  <body data-spy="scroll" data-target="#KCDentalNavbar" data-offset="110">
+
+    <div class="preload-icon"></div>
 
     <!-- begin top navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,12 +48,12 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
-            <li><a class="page-scroll" href="#aboutus" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
-            <li><a class="page-scroll" href="#ouroffice" data-toggle="collapse" data-target=".navbar-collapse.in">Our Office</a></li>
-            <li><a class="page-scroll" href="#services" data-toggle="collapse" data-target=".navbar-collapse.in">Services</a></li>
-            <li><a class="page-scroll" href="#newpatients" data-toggle="collapse" data-target=".navbar-collapse.in">New Patients</a></li>
-            <li><a class="page-scroll" href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a></li>
+            <li class="active"><a class="page-scroll" href="#home">Home</a></li>
+            <li><a class="page-scroll" href="#aboutus">About Us</a></li>
+            <li><a class="page-scroll" href="#ouroffice">Our Office</a></li>
+            <li><a class="page-scroll" href="#services">Services</a></li>
+            <li><a class="page-scroll" href="#newpatients">New Patients</a></li>
+            <li><a class="page-scroll" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -63,6 +65,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron-kc shadow">
       <div class="container-fluid-kc">
+        <span id="home" class="offset-anchor"></span>
         <div class="hero-text-wrapper">
         <h1>Welcome to KC Dental!</h1>
         <h2>Family and Cosmetic Dentistry Serving Northwest Austin</h2>
@@ -160,7 +163,7 @@
         <h2 class="text-center">Take a tour!</h2>
         <p class="text-center">Our modern, comfortable office</p>
         <!--carousel for photos-->
-        <div id="carousel-office-tour" class="main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": 3000 }'>
+        <div id="carousel-office-tour" class="main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": false }'>
           <!-- Slides -->
           <div class="carousel-cell">
             <img class="image-responsive" src="images/image1.jpg" alt="...">
@@ -347,38 +350,10 @@
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
       <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
-      <script type="text/javascript">
-        (function($){
-
-        (function() {
-    var docElem = document.documentElement,
-      didScroll = false;
-      document.querySelector( '#back-to-top' );
-    function init() {
-      window.addEventListener( 'scroll', function() {
-        if( !didScroll ) {
-          didScroll = true;
-          setTimeout( scrollPage, 50 );
-        }
-      }, false );
-    }
-  });
-
-  function scrollToTop() {
-    var scroll = $(window).scrollTop();
-    var $backToTop = $("#back-to-top");
-    if (scroll >= 50) {
-      $backToTop.addClass("show");
-    } else {
-      $backToTop.removeClass("show");
-    }
-  }
-
-  $('a[href="#top"]').on('click',function(){
-    $('html, body').animate({scrollTop: 0}, 1350, "easeInOutQuint");
-    return false;
-  });
-        })(jQuery);
+      <script>
+        $(window).load(function() {
+        $(".preload-icon").fadeOut("slow");
+        });
         </script>
   </body>
 </html>
