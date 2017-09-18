@@ -83,6 +83,14 @@ body {
 .navbar-brand {
     padding: 5px 15px;
 }
+
+@media screen and (min-width: 768px) {
+    ul.nav li.dropdown:hover ul.dropdown-menu {
+        display:block;
+    }
+}
+
+
 .container-fluid {
     padding: 0px;
 }
@@ -201,6 +209,12 @@ blockquote {
 #carousel-office-tour .flickity-viewport {
     overflow: visible;
 }
+#carousel-office-tour .carousel-cell:not(.is-selected) img {
+    filter: blur(5px) brightness(30%) grayscale(60%);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
 
 #carousel-office-tour .carousel-cell.is-selected img {
   -webkit-transform: scale(1.15);
@@ -213,14 +227,10 @@ blockquote {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  box-shadow: 10px 10px 20px #c2c2a9;
-  z-index: 1000;
+  position: relative;
+  z-index: 2;
 }
 
-#carousel-office-tour .carousel-cell:not(.is-selected) img {
-    filter: blur(5px) brightness(30%) grayscale(60%);
-    overflow: hidden;
-}
 
 /* map */
 
@@ -260,11 +270,20 @@ blockquote {
 }
 
 /**** css for team page ***/
+
+
 /*dentist carousel*/
 .carousel-dentists {
     width: 75%;
+    max-width: 1024px;
     margin: auto;
+    overflow: hidden;
+//    padding: 50px;
 }
+.carousel-dentists .flickity-viewport {
+    overflow: visible;
+}
+
 .carousel-staff {
     width: 75%;
     margin: auto;
@@ -282,16 +301,34 @@ blockquote {
 .carousel-staff .carousel-cell {
     margin: 20px;
 }
+
 .carousel-staff .carousel-cell {
     margin: 20px;
+}
+
+.carousel-dentists .carousel-cell.is-selected img,
+.carousel-staff .carousel-cell.is-selected img {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
 .carousel-dentists .carousel-cell:not(.is-selected) img,
 .carousel-staff .carousel-cell:not(.is-selected) img {
     filter: blur(2px) brightness(70%) grayscale(100%);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
-
 
 .carousel-dentists-bio {
    width: 100%
@@ -299,11 +336,12 @@ blockquote {
 .carousel-dentists-bio .carousel-cell{
    width: 100%
 }
-
 .carousel-caption {
     padding: 0;
    bottom: 0;
 }
+
+
 
 /* Services page */
 .services-header {

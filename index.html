@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll" data-target="#KCDentalNavbar" data-offset="110">
+  <body>
 
     <div class="preload-icon"></div>
 
@@ -48,12 +48,34 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a class="page-scroll" href="#home">Home</a></li>
-            <li><a class="page-scroll" href="#aboutus">About Us</a></li>
-            <li><a class="page-scroll" href="#ouroffice">Our Office</a></li>
-            <li><a class="page-scroll" href="#services">Services</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+              <ul class="dropdown-menu">
+                <li><a href="#overview" data-toggle="collapse" data-target="navbar-collapse">Overview</a></li>
+                <li><a href="team.html" data-toggle="collapse" data-target="navbar-collapse">Meet the team</a></li>
+                <li><a href="#phototour" data-toggle="collapse" data-target="navbar-collapse">Office tour</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="services.html#general">General Dentistry</a></li>
+                <li><a href="services.html#advanced">Advanced Dentistry</a></li>
+                <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                <li><a href="services.html#invisalign">Invisalign</a></li>
+                <li><a href="services.html#braces">Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics</a></li>
+                <li><a href="services.html#implants">Implants</a></li>
+              </ul>
+            </li>
             <li><a class="page-scroll" href="#newpatients">New Patients</a></li>
-            <li><a class="page-scroll" href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a class="page-scroll" href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+              <ul class="dropdown-menu">
+                <li><a href="#contact">Contact us</li>
+                <li><a href="#map">Map</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -65,7 +87,6 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron-kc shadow">
       <div class="container-fluid-kc">
-        <span id="home" class="offset-anchor"></span>
         <div class="hero-text-wrapper">
         <h1>Welcome to KC Dental!</h1>
         <h2>Family and Cosmetic Dentistry Serving Northwest Austin</h2>
@@ -103,11 +124,11 @@
     <div class="container-fluid bg-light" style="margin-bottom:30px">
       <div class="row grid-columns">
         <div class="col-md-4 aos shadow">
-          <span id="aboutus" class="offset-anchor"></span>
+          <span id="overview" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe972;" class="icon-users"></span></h2>
           <h2 class="text-center">About Us</h2>
           <p>KC Dental was founded by Dr. Kyleen Chen in July of 2006, and since then our office has grown tremendously!</p>
-          <p>Our team includes:
+          <p><strong>Our team includes:</strong>
             <ul>
               <li>Kyleen Chen, DDS</li>
               <li>Court Wilson, DDS</li>
@@ -118,7 +139,7 @@
               <li>Our Staff</li>
             </ul>
           </p>
-          <p>We pride ourselves on providing high-quality services because at KC Dental, "the patient always comes first!"</p>
+          <p>We pride ourselves on providing high-quality services because at KC Dental, <strong><em>"the patient always comes first!"</em></strong></p>
           <div class="btn-wrapper-fake">
             <a class="btn btn-theme" href="team.html#" role="button" >Meet the team</a>
           </div>
@@ -127,7 +148,6 @@
           </div>
         </div> <!--end aboutus-->
         <div class="col-md-4 aos shadow">
-          <span id="ouroffice" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe903;" class="icon-office"></span></h2>
           <h2 class="text-center">Our Office</h2>
           <img src="images/clinicview.jpg" alt="" class="img-responsive shadow" style="margin:auto;border: solid rgba(255,255,255,0.5) 10px;margin-bottom:20px;">
@@ -144,6 +164,17 @@
           <h2 class="text-center">Services</h2>
           <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patients to travel to different offices to receive their dental treatment.</p>
           <p>Our office utilizes the latest technologies and techniques to ensure we provide the best family, cosmetic, and specialty dentistry services in the Northwest Austin area.</p>
+          <p><strong>Get more details!</strong>
+              <ul>
+                <li><a href="services.html#general">General Dentistry</a></li>
+                <li><a href="services.html#advanced">Advanced Dentistry</a></li>
+                <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                <li><a href="services.html#invisalign">Invisalign</a></li>
+                <li><a href="services.html#braces">Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics</a></li>
+                <li><a href="services.html#implants">Implants</a></li>
+              </ul>
+          <p>
           <div class="btn-wrapper-fake">
             <a class="btn btn-theme" href="#" role="button">View Services</a>
           </div>
@@ -291,7 +322,7 @@
     <div class="container-fluid bg-dark shadow" style="margin-bottom: 30px">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <span id="contact" class="offset-anchor"></span>
+          <span id="map" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe94b;" class="icon-map"></span></h2>
           <h2 class="text-center">Location</h2>
           <p class="text-center">We are conveniently located in the Parmer/McNeil Plaza, at the intersection of Parmer Lane and McNeil Road in Northwest Austin.</p>
@@ -307,6 +338,7 @@
     <div class="container-fluid kc-footer">
       <div class="row">
         <div class="col-sm-4 foot">
+          <span id="contact" class="offset-anchor"></span>
           <h2>Contact Us</h2>
                     <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe91b;" class="icon-road"></span></h2>
           <p>6301 West Palmer Lane Suite 606</p>
@@ -350,10 +382,13 @@
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
       <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
-      <script>
+      <script type="text/javascript">
         $(window).load(function() {
         $(".preload-icon").fadeOut("slow");
+        $(".carousel-office-tour").flickity('resize');
+        var hash = window.location.hash;
+        $(document).scrollTop( $(hash).offset().top );
         });
-        </script>
+      </script>
   </body>
 </html>

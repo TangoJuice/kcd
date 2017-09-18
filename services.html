@@ -30,6 +30,8 @@
   </head>
   <body>
 
+    <div class="preload-icon"></div>
+
     <!-- begin top navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -45,18 +47,65 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll" href="index.html#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
-            <li><a class="page-scroll" href="index.html#aboutus" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
-            <li><a class="page-scroll" href="index.html#ouroffice" data-toggle="collapse" data-target=".navbar-collapse.in">Our Office</a></li>
-            <li><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Services</a></li>
-            <li><a class="page-scroll" href="index.html#newpatients" data-toggle="collapse" data-target=".navbar-collapse.in">New Patients</a></li>
-            <li><a class="page-scroll" href="index.html#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html#overview" data-toggle="collapse" data-target="navbar-collapse">Overview</a></li>
+                <li><a href="team.html#" data-toggle="collapse" data-target="navbar-collapse">Meet the team</a></li>
+                <li><a href="index.html#phototour" data-toggle="collapse" data-target="navbar-collapse">Office tour</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="services.html#general">General Dentistry</a></li>
+                <li><a href="services.html#advanced">Advanced Dentistry</a></li>
+                <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                <li><a href="services.html#invisalign">Invisalign</a></li>
+                <li><a href="services.html#braces">Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics</a></li>
+                <li><a href="services.html#implants">Implants</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#newpatients">New Patients</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html#contact">Contact us</li>
+                <li><a href="index.html#map">Map</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
     </nav> <!-- end top navigation bar -->
 
     <!-- website contents -->
+    <div class="container-fluid bg-light container-first">
+      <div class="col-md-12 services-header">
+        <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe9e9;" class="icon-grin"></span></h2>
+        <h2 class="text-center">Services</h2>
+      </div>
+      <div class="col-md-6 services-text">
+        <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patients to travel to different offices to receive their dental treatment.</p>
+        <p>Our office utilizes the latest technologies and techniques to ensure we provide the best family, cosmetic, and specialty dentistry services in the Northwest Austin area.</p>
+        <p><strong>Get more details!</strong>
+          <ul>
+            <li><a href="services.html#general">General Dentistry</a></li>
+            <li><a href="services.html#advanced">Advanced Dentistry</a></li>
+            <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+            <li><a href="services.html#invisalign">Invisalign</a></li>
+            <li><a href="services.html#braces">Braces</a></li>
+            <li><a href="services.html#periodontics">Periodontics</a></li>
+            <li><a href="services.html#implants">Implants</a></li>
+          </ul>
+        <p>
+      </div>
+      <div class="col-md-6 services-images">
+        <img class="img-responsive" src="images/image4.jpg" alt="">
+      </div>
+    </div>
+
     <div class="container-fluid bg-light container-first">
       <div class="row">
       <div class="col-md-12 services-header">
@@ -107,7 +156,7 @@
           </div>
         </div> <!-- end images -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container  advanced -->
 
     <div class="container-fluid bg-light ">
       <div class="row">
@@ -128,7 +177,7 @@
            <li><p><strong>Dental Implants:</strong> We utilize the latest technology to provide high-quality dental implants. Dental implants can be used to replace a single tooth or can be used to support prosthetic appliances such as dentures. See our <a href="#periodontics">Periodontics</a> page for more details.</p>
         </div> <!-- end text -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container  cosmetic -->
 
     <div class="container-fluid bg-light ">
       <div class="row">
@@ -144,7 +193,7 @@
           <img class="img-responsive" src="images/invisalign.jpg" alt="">
         </div> <!-- end images -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container invisalign -->
 
 
     <div class="container-fluid bg-light ">
@@ -161,7 +210,7 @@
           <p><strong>Traditional orthodontics</strong>, also known as braces, is the most widely used method of correcting alignment and helping patients achieve their desired smile. Braces are used to correct various dental issues such misalignment, under bites, open bites, cross bites, deep bites, and other carious dental issues. Braces involve metal bracket, wires, and bands making them a strong and effective approach to straightening teeth. Dr. Kyleen Chen has received post-graduate training in both traditional and invisible braces. Dr. Chen has had a stellar result with traditional braces and has helped her patients achieve a healthy smile. To learn more about traditional braces, please call our office to set up a <strong>FREE</strong> consult with Dr. Chen today!</p>
         </div> <!-- end text -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container  braces -->
 
     <div class="container-fluid bg-light ">
       <div class="row">
@@ -184,7 +233,7 @@
           <img class="img-responsive" src="images/IMG_3309.JPG" alt="">
         </div> <!-- end images -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container periodontics -->
 
     <div class="container-fluid bg-light ">
       <div class="row">
@@ -204,7 +253,7 @@
         </div> <!-- end text -->
  <!-- end images -->
       </div> <!-- end row -->
-    </div> <!-- end container  general -->
+    </div> <!-- end container  implants -->
 
     <!-- footer -->
     <div class="container-fluid kc-footer">
@@ -246,5 +295,12 @@
     <script> window.jQuery || document.write("<script src='js/bootstrap.js'><\/script>")</script>
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
+      <script>
+        $(window).load(function() {
+        $(".preload-icon").fadeOut("slow");
+        var hash = window.location.hash;
+        $(document).scrollTop( $(hash).offset().top );
+        });
+        </script>
   </body>
 </html>

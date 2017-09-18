@@ -30,6 +30,9 @@
         <![endif]-->
   </head>
   <body>
+
+    <div class="preload-icon"></div>
+
     <!-- begin top navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -45,12 +48,34 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll" href="index.html#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
-            <li><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
-            <li><a class="page-scroll" href="index.html#ouroffice" data-toggle="collapse" data-target=".navbar-collapse.in">Our Office</a></li>
-            <li><a class="page-scroll" href="index.html#services" data-toggle="collapse" data-target=".navbar-collapse.in">Services</a></li>
-            <li><a class="page-scroll" href="index.html#newpatients" data-toggle="collapse" data-target=".navbar-collapse.in">New Patients</a></li>
-            <li><a class="page-scroll" href="index.html#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html#overview" data-toggle="collapse" data-target="navbar-collapse">Overview</a></li>
+                <li><a href="#" data-toggle="collapse" data-target="navbar-collapse">Meet the team</a></li>
+                <li><a href="index.html#phototour" data-toggle="collapse" data-target="navbar-collapse">Office tour</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="services.html#general">General Dentistry</a></li>
+                <li><a href="services.html#advanced">Advanced Dentistry</a></li>
+                <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
+                <li><a href="services.html#invisalign">Invisalign</a></li>
+                <li><a href="services.html#braces">Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics</a></li>
+                <li><a href="services.html#implants">Implants</a></li>
+              </ul>
+            </li>
+            <li><a class="page-scroll" href="index.html#newpatients">New Patients</a></li>
+            <li class="dropdown">
+              <a class="page-scroll" href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html#contact">Contact us</li>
+                <li><a href="index.html#map">Map</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -458,6 +483,14 @@
         $("a").on('shown.bs.tab', function() {
         $(".carousel-staff").flickity('resize');
         });
+        });
+      </script>
+      <script>
+        $(window).load(function() {
+        $(".preload-icon").fadeOut("slow");
+        $(".carousel-office-tour").flickity('resize');
+        var hash = window.location.hash;
+        $(document).scrollTop( $(hash).offset().top );
         });
       </script>
   </body>
