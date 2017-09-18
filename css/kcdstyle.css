@@ -28,7 +28,7 @@ p, div {
     background-color: rgba(255,255,255,0.4);
 }
 .bg-team {
-    background-color: rgba(58,101,183,0.2);
+    background-color: rgba(58,101,183,.2);
 }
 /* icon colors in main grid */
 [class*='col-'] [class^='icon-'] {
@@ -64,7 +64,10 @@ a:visited {
 }
 .container-fluid.bg-team,
 .container-fluid.bg-light,
-.container-fluid.bg-dark {
+.container-fluid.bg-dark,
+.container.bg-team,
+.container.bg-light,
+.container.bg-dark {
     margin-bottom: 30px;
 }
 /* container box shadow */
@@ -80,7 +83,7 @@ a:visited {
 }
 .offset-anchor {
     position: absolute;
-    top: -60px;
+    top: -50px;
 }
 /* navbar customization */
 .navbar {
