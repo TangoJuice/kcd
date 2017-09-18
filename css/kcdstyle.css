@@ -32,8 +32,14 @@ p, div {
     margin-top: 50px;
 }
 
-[class^='icon-'] {
+[class*='col-'] [class^='icon-'] {
     color: #ac4c00;
+}
+
+.bg-team {
+    //    background-color: #f8982a;
+    //    background-color: rgba(248,152,42,0.5);
+    background-color: rgba(58,101,183,0.2);
 }
 
 a:active,
@@ -62,6 +68,8 @@ body {
 //    background-image: linear-gradient(to bottom right,rgba(116,57,106,0.2),rgba(92,160,195,.2));
     background-size: cover;
     color:#1a1a1a;
+    position: relative;
+    overflow-y: scroll;
 }
 .container {
     box-shadow: 4px 4px 8px #c2c2a9;
@@ -75,12 +83,27 @@ body {
 .navbar-brand {
     padding: 5px 15px;
 }
+.container-fluid {
+    padding: 0px;
+}
+.preload-icon {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-image: url('../images/Logo.png');
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 /* Styling for responsive image AND text scaling. Background image with position relative and height scaled to viewport with. Text is overlaid with hero-wrapper, position absolute. background position is set to focus on faces */
 
 .jumbotron-kc {
     margin-top: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     padding: 0px;
 }
 .jumbotron-kc > .container-fluid-kc {
@@ -93,7 +116,6 @@ body {
     color:beige;
     text-shadow: 2px 2px rgba(24,25,24,0.75);
     height: 50vw;
-    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -142,33 +164,66 @@ body {
 }
 
 /* office tour */
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img{
-   margin: auto;
+blockquote {
+        border: none;
+}
+#testimonial-carousel {
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+}
+#testimonial-carousel .carousel-cell{
+    width: 100%;
+    //    background-image: linear-gradient(to right, rgba(58,101,183,0.2),white 25%,white 75%,rgba(58,101,183,0.2));
+    background-color: rgba(58,101,183,0.2);
+    text-align: center;
+    height: 100%;
+    padding: 20px 0;
+}
+#testimonial-carousel .carousel-quote {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 481px) {
+    #testimonial-carousel blockquote {
+        font-size:14px;
+    }
+}
+#carousel-office-tour {
+    padding: 50px 0;
+    overflow: hidden;
 }
 
-.carousel-control,
-.carousel{
-    background-image: none !important;
-    background-color: transparent;
+#carousel-office-tour .flickity-viewport {
+    overflow: visible;
 }
 
-.carousel-wrapper {
-    margin: 30px auto;
-    padding-left:0px;
-    padding-right: 0px;
+#carousel-office-tour .carousel-cell.is-selected img {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 10px 10px 20px #c2c2a9;
+  z-index: 1000;
 }
 
-.item {
-    padding: 20px;
+#carousel-office-tour .carousel-cell:not(.is-selected) img {
+    filter: blur(5px) brightness(30%) grayscale(60%);
+    overflow: hidden;
 }
-.item > img {
-    box-shadow: 8px 8px 8px #c2c2a9;
-    border:solid rgba(255,255,255,0.8) 12px;
-/*
 
-/*map */
+/* map */
+
 .map-responsive{
     padding-top: 30px;
     overflow:hidden;
@@ -202,4 +257,132 @@ body {
 .kc-footer {
     background-color: #9d9d9d;
     background-color: beige;
+}
+
+/**** css for team page ***/
+/*dentist carousel*/
+.carousel-dentists {
+    width: 75%;
+    margin: auto;
+}
+.carousel-staff {
+    width: 75%;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 640px) {
+    .carousel-dentists,
+    .carousel-staff {
+    width: 100%;
+    }
+}
+
+.carousel-dentists .carousel-cell,
+.carousel-staff .carousel-cell {
+    margin: 20px;
+}
+.carousel-staff .carousel-cell {
+    margin: 20px;
+}
+
+.carousel-dentists .carousel-cell:not(.is-selected) img,
+.carousel-staff .carousel-cell:not(.is-selected) img {
+    filter: blur(2px) brightness(70%) grayscale(100%);
+    overflow: hidden;
+}
+
+
+.carousel-dentists-bio {
+   width: 100%
+}
+.carousel-dentists-bio .carousel-cell{
+   width: 100%
+}
+
+.carousel-caption {
+    padding: 0;
+   bottom: 0;
+}
+
+/* Services page */
+.services-header {
+    background-image: linear-gradient(to bottom right,#6d98ea,#3a65b7);
+    //    background-color: rgba(58,101,183,0.2);
+    padding: 35px;
+}
+.services-text {
+    padding: 30px;
+}
+
+.services-images {
+    padding: 30px;
+    text-align: center;
+
+}
+
+.video-container {
+    position: relative;
+    height: 0;
+    padding-top: 30px;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Go to Top
+-------------------------------------------------------*/
+#back-to-top {
+  display: block;
+  z-index: 100;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  font-size: 24px;
+  position: fixed;
+    bottom: 20px;
+//  bottom: -34px;
+  right: 20px;
+  line-height: 35px;
+  background-color: rgba(41, 43, 50, 0.3);
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#back-to-top i {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top a {
+  display: block;
+  color: #fff;
+}
+
+#back-to-top.show {
+  bottom: 20px;
+}
+
+#back-to-top:hover {
+    background-color: rgba(58,101,183,0.8);
+    //background-color: #b09980;
+  bottom: 24px;
+}
+
+#back-to-top:hover i {
+  color: #fff;
+  text-decoration: none;
 }

@@ -20,6 +20,7 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:700|Open+Sans" rel="stylesheet">
     <link href="css/icomoon.css" rel="stylesheet">
+    <link href="css/flickity.min.css" rel="stylesheet">
     <link href="css/kcdstyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,7 +29,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#KCDentalNavbar" data-offset="110">
+
+    <div class="preload-icon"></div>
 
     <!-- begin top navigation bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -45,12 +48,12 @@
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
           <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">Home</a></li>
-            <li><a class="page-scroll" href="#aboutus" data-toggle="collapse" data-target=".navbar-collapse.in">About Us</a></li>
-            <li><a class="page-scroll" href="#ouroffice" data-toggle="collapse" data-target=".navbar-collapse.in">Our Office</a></li>
-            <li><a class="page-scroll" href="#services" data-toggle="collapse" data-target=".navbar-collapse.in">Services</a></li>
-            <li><a class="page-scroll" href="#newpatients" data-toggle="collapse" data-target=".navbar-collapse.in">New Patients</a></li>
-            <li><a class="page-scroll" href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">Contact</a></li>
+            <li class="active"><a class="page-scroll" href="#home">Home</a></li>
+            <li><a class="page-scroll" href="#aboutus">About Us</a></li>
+            <li><a class="page-scroll" href="#ouroffice">Our Office</a></li>
+            <li><a class="page-scroll" href="#services">Services</a></li>
+            <li><a class="page-scroll" href="#newpatients">New Patients</a></li>
+            <li><a class="page-scroll" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -62,13 +65,40 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron-kc shadow">
       <div class="container-fluid-kc">
+        <span id="home" class="offset-anchor"></span>
         <div class="hero-text-wrapper">
         <h1>Welcome to KC Dental!</h1>
         <h2>Family and Cosmetic Dentistry Serving Northwest Austin</h2>
         </div>
       </div>
     </div>
+    <!-- end jumbotron -->
 
+    <!-- testimonial slider -->
+    <div class="container-fluid bg-light shadow" style="margin-bottom:30px">
+      <div id="testimonial-carousel" data-flickity='{ "wrapAround": true, "autoPlay": false, "pageDots": false, "prevNextButtons": true }'>
+        <!-- Slides -->
+        <div class="carousel-cell">
+          <blockquote class="carousel-quote">
+            <p><em>Great quality of service! Their staff is extremely friendly and helpful... Highly recommend!</em></p>
+            <footer>Hsin Fei L.<p class="text-center"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></p></footer>
+          </blockquote>
+          </div>
+        <div class="carousel-cell">
+          <blockquote class="carousel-quote">
+            <p><em>... Dr. Chen you are an angel, thank you for taking such good care of us!</em></p>
+            <footer>Robin L.<p class="text-center"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></p></footer>
+          </blockquote>
+        </div>
+        <div class="carousel-cell">
+          <blockquote class="carousel-quote">
+            <p><em>... Lisa and Dr. Fu are great with kids, and the TV screens above the chairs are very helpful to calm little ones...</em></p>
+            <footer>Courtney D.<p class="text-center"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></p></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <!-- end slider -->
     <!--aboutus ouroffice newpatients-->
     <div class="container-fluid bg-light" style="margin-bottom:30px">
       <div class="row grid-columns">
@@ -112,7 +142,7 @@
           <span id="services" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe9e9;" class="icon-grin"></span></h2>
           <h2 class="text-center">Services</h2>
-          <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patient to travel to different offices to receive their dental treatment.</p>
+          <p>In addition to our general services, we have in-office specialists that provide services such as implant placement and root canal treatment, which eliminates the need for many of our patients to travel to different offices to receive their dental treatment.</p>
           <p>Our office utilizes the latest technologies and techniques to ensure we provide the best family, cosmetic, and specialty dentistry services in the Northwest Austin area.</p>
           <div class="btn-wrapper-fake">
             <a class="btn btn-theme" href="#" role="button">View Services</a>
@@ -124,84 +154,61 @@
       </div> <!--row-->
     </div>
     <!--end aboutus ouroffice services-->
-    <!-- container for office tour -->
 
-    <div class="carousel-wrapper container bg-dark">
-      <div class="anchor-wrapper">
-      <h2 id="phototour" class="offset-anchor"></h2>
-      <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe90e;" class="icon-images"></span></h2>
-      <h2 class="text-center">Take a tour!</h2>
-      <p class="text-center">Our modern, comfortable office</p>
-      <!--carousel for photos-->
-      <div id="carousel-office-tour" class="carousel slide" data-ride="carousel" data-interval="false" data-pause="hover">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-office-tour" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="1"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="2"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="3"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="4"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="5"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="6"></li>
-          <li data-target="#carousel-office-tour" data-slide-to="7"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
+    <!--new carousel office tour -->
+    <div id="carousel-wrapper" class="container-fluid bg-dark shadow" style="margin-bottom:30px">
+      <div class="col-xs-12" style="padding:30px 0;">
+        <h2 id="phototour" class="offset-anchor"></h2>
+        <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe90e;" class="icon-images"></span></h2>
+        <h2 class="text-center">Take a tour!</h2>
+        <p class="text-center">Our modern, comfortable office</p>
+        <!--carousel for photos-->
+        <div id="carousel-office-tour" class="main-carousel" data-flickity='{ "wrapAround": true, "autoPlay": false }'>
+          <!-- Slides -->
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image1.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image2.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image3.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image4.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image5.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image6.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image7.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-          <div class="item">
+          <div class="carousel-cell">
             <img class="image-responsive" src="images/image8.jpg" alt="...">
             <div class="carousel-caption">
             </div>
           </div>
-        </div> <!--end carousel inner-->
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-office-tour" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-office-tour" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>  <!--end carousel-->
-      </div>
-    </div>
-    <!--end container for office tour-->
+        </div>  <!--end carousel-->
+      </div> <!--end col-xs-12-->
+    </div> <!--end container-fluid -->
+    <!--end new carousel -->
 
     <!-- new patients -->
     <div class="container bg-light" style="margin-bottom: 30px">
@@ -219,38 +226,51 @@
               <div class="btn-wrapper">
                 <a class="btn btn-theme" href="http://kcdentalaustin.com/KCDental New Patient Packet.pdf" role="button" style="display:block;margin:auto;">Download New Patient Form</a>
               </div>
-              <p>We are in-network providers for <a href="#insurancelist" data-toggle="collapse" >these insurance companies:</a></p>
-              <div id="insurancelist" class="collapse">
-                <ul>
-                  <li>Aetna</li>
-                  <li>Aetna Access (Discount Plan)</li>
-                  <li>Ameritas</li>
-                  <li>Anthem BC</li>
-                  <li>Assurant / Dental Health Allience</li>
-                  <li>Blue Cross/Blue Shield</li>
-                  <li>Cigna</li>
-                  <li>Cigna Discount (discount plan)</li>
-                  <li>City of Austin ERISA</li>
-                  <li>Connection Dental</li>
-                  <li>Delta Dental</li>
-                  <li>Dentemax</li>
-                  <li>Dental Network of America</li>
-                  <li>Dental Select</li>
-                  <li>GEHA</li>
-                  <li>Guardian</li>
-                  <li>Great West</li>
-                  <li>Health Partner Dental</li>
-                  <li>Humana Dental</li>
-                  <li>Lincoln Jefferson Pilot</li>
-                  <li>Metlife</li>
-                  <li>Premier Access</li>
-                  <li>Principal Mutual Life</li>
-                  <li>Standard Insurance</li>
-                  <li>Sun Life and Health</li>
-                  <li>United Healthcare</li>
-                  <li>United Concordia</li>
-                  <li>Wellpoint</li>
-                </ul>
+              <p>We are in-network providers for <a href="#insurance-list"  data-toggle="modal" data-target="#insurance-list">these insurance companies:</a></p>
+              <div id="insurance-list" class="modal" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header bg-dark">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4>We are in-network providers for these insurance companies:</h4>
+                    </div>
+                    <div class="modal-body">
+                      <ul>
+                        <li>Aetna</li>
+                        <li>Aetna Access (Discount Plan)</li>
+                        <li>Ameritas</li>
+                        <li>Anthem BC</li>
+                        <li>Assurant / Dental Health Allience</li>
+                        <li>Blue Cross/Blue Shield</li>
+                        <li>Cigna</li>
+                        <li>Cigna Discount (discount plan)</li>
+                        <li>City of Austin ERISA</li>
+                        <li>Connection Dental</li>
+                        <li>Delta Dental</li>
+                        <li>Dentemax</li>
+                        <li>Dental Network of America</li>
+                        <li>Dental Select</li>
+                        <li>GEHA</li>
+                        <li>Guardian</li>
+                        <li>Great West</li>
+                        <li>Health Partner Dental</li>
+                        <li>Humana Dental</li>
+                        <li>Lincoln Jefferson Pilot</li>
+                        <li>Metlife</li>
+                        <li>Premier Access</li>
+                        <li>Principal Mutual Life</li>
+                        <li>Standard Insurance</li>
+                        <li>Sun Life and Health</li>
+                        <li>United Healthcare</li>
+                        <li>United Concordia</li>
+                        <li>Wellpoint</li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer bg-dark">
+                      <button type="button" class="btn btn-theme" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <p>Don't see your insurance company? Call to verify, as we add new companies frequently.</p>
             </div>
@@ -268,9 +288,9 @@
     <!-- end new patients-->
 
     <!-- map -->
-    <div class="container bg-dark" style="margin-bottom: 30px">
+    <div class="container-fluid bg-dark shadow" style="margin-bottom: 30px">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-sm-8 col-sm-offset-2">
           <span id="contact" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe94b;" class="icon-map"></span></h2>
           <h2 class="text-center">Location</h2>
@@ -312,10 +332,16 @@
         <div class="col-sm-4 foot">
           <h2>Follow Us</h2>
           <a href="https://www.facebook.com/KC-Dental-162140487152151/" style="font-size:30px;color:#222;"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></a>
+          <span style="font-size:30px">&nbsp;</span>
           <a href="https://www.yelp.com/biz/kc-dental-austin" style="font-size:30px;color:#222;"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></a>
         </div>
       </div>
     </div> <!-- container  -->
+
+    <div id="back-to-top">
+      <a href="#top"><i aria-hidden="true" data-icon="&#xea41;" class="icon-circle-up"></i></a>
+    </div>
+
     <!-- Bootstrap core JavaScript
          ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -323,5 +349,11 @@
     <script> window.jQuery || document.write("<script src='js/bootstrap.js'><\/script>")</script>
       <script type="text/javascript" src="js/bootstrap.js"> </script>
       <script type="text/javascript" src="js/bootstrap-grid-columns.js"> </script>
+      <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+      <script>
+        $(window).load(function() {
+        $(".preload-icon").fadeOut("slow");
+        });
+        </script>
   </body>
 </html>
