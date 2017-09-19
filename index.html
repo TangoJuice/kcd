@@ -46,7 +46,7 @@
           <a class="navbar-brand" href="#"><img class="img-responsive" src="images/Logo.png" alt="KC Dental"></a>
         </div>
         <div id="KCDentalNavbar" class="navbar-collapse collapse">
-          <p class="navbar-text"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span> (512) 918-0888</p>
+          <p class="navbar-text phone"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span><strong> (512) 918-0888</strong></p>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
@@ -64,9 +64,9 @@
                 <li><a href="services.html#advanced">Advanced Dentistry</a></li>
                 <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
                 <li><a href="services.html#invisalign">Invisalign</a></li>
-                <li><a href="services.html#braces">Braces</a></li>
-                <li><a href="services.html#periodontics">Periodontics</a></li>
-                <li><a href="services.html#implants">Implants</a></li>
+                <li><a href="services.html#braces">Traditional Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics & Implants</a></li>
+                <li><a href="services.html#implants">Affordable Implants</a></li>
               </ul>
             </li>
             <li><a class="page-scroll" href="#newpatients">New Patients</a></li>
@@ -118,8 +118,22 @@
             <footer>Courtney D.<p class="text-center"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></p></footer>
           </blockquote>
         </div>
+        <div class="carousel-cell">
+          <blockquote class="carousel-quote">
+            <p><em>... I recommend KC Dental to everyone I know. If you're looking for a dentist in Northwest Austin, this is the place!</em></p>
+            <footer>Tracie H.<p class="text-center"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></p></footer>
+          </blockquote>
+        </div>
+        <div class="carousel-cell">
+          <blockquote class="carousel-quote">
+            <p><em>moved to Austin a year and a half ago. waited way too long to find a dentist, but I am ecstatic I found this place...</em></p>
+            <footer>Stephanie E.<p class="text-center"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></p></footer>
+          </blockquote>
+        </div>
       </div>
     </div>
+
+
     <!-- end slider -->
     <!--aboutus ouroffice newpatients-->
     <div class="container-fluid bg-light">
@@ -171,9 +185,9 @@
                 <li><a href="services.html#advanced">Advanced Dentistry</a></li>
                 <li><a href="services.html#cosmetic">Cosmetic Dentistry</a></li>
                 <li><a href="services.html#invisalign">Invisalign</a></li>
-                <li><a href="services.html#braces">Braces</a></li>
-                <li><a href="services.html#periodontics">Periodontics</a></li>
-                <li><a href="services.html#implants">Implants</a></li>
+                <li><a href="services.html#braces">Traditional Braces</a></li>
+                <li><a href="services.html#periodontics">Periodontics & Implants</a></li>
+                <li><a href="services.html#implants">Affordable Implants</a></li>
               </ul>
           <p>
           <div class="btn-wrapper-fake">
@@ -245,13 +259,13 @@
     <!-- new patients -->
     <div class="container-fluid bg-light shadow">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 new-patients">
           <span id="newpatients" class="offset-anchor"></span>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe923;" class="icon-profile"></span></h2>
           <h2 class="text-center">New Patients</h2>
-          <img src="images/signup.jpg" alt="" class="img-responsive shadow with-border">
+          <img id="newpatients-photo" src="images/signup.jpg" alt="" class="img-responsive shadow with-border">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 new-patients">
               <h3 class="text-center"><span aria-hidden="true" data-icon="&#xe973;" class="icon-user-plus"></span></h3>
               <h3 class="text-center">We welcome new patients!</h3>
               <p>As a family dentistry practice, we welcome both adults and children, and gladly accept most PPO insurance, both network and out-of-network.</p>
@@ -306,7 +320,7 @@
               </div>
               <p>Don't see your insurance company? Call to verify, as we add new companies frequently.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 new-patients">
               <h3 class="text-center"><span aria-hidden="true" data-icon="&#xe975;" class="icon-user-check"></span></h3>
               <h3 class="text-center">No insurance? No problem!</h3>
               <p>We also welcome new patients based on fee-for-service. We offer discounts and flexible payment plans for patients without insurance. We also provide no interest payment plans with Care Credit.</p>
@@ -342,10 +356,10 @@
           <span id="contact" class="offset-anchor"></span>
           <h2>Contact Us</h2>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe91b;" class="icon-road"></span></h2>
-          <p>6301 West Palmer Lane Suite 606</p>
+          <p>6301 West Parmer Lane Suite 606</p>
           <p>Austin, TX 78729</p>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xe942;" class="icon-phone"></span></h2>
-          <p>512-918-0888</p>
+          <p><strong>(512)918-0888</strong></p>
           <h2 class="text-center"><span aria-hidden="true" data-icon="&#xea84;" class="icon-mail2"></span></h2>
           <p>info@kcdentalaustin.com</p>
         </div>
@@ -366,6 +380,11 @@
           <h2>Follow Us</h2>
           <a href="https://www.facebook.com/KC-Dental-162140487152151/" class="footer-social-media-icon"><span aria-hidden="true" data-icon="&#xea90;" class="icon-facebook"></span></a>
           <a href="https://www.yelp.com/biz/kc-dental-austin" class="footer-social-media-icon"><span aria-hidden="true" data-icon="&#xead7;" class="icon-yelp"></span></a>
+          <div class="logo-wrapper">
+            <img src="images/Logo.png" alt="KC Dental">
+            <h5><em>Serving Austin and the greater Austin area: Round Rock, Cedar Park, Plugerville, Leander, Hutto, and Georgetown</em></h5>
+          </div>
+
         </div>
       </div>
     </div> <!-- container  -->
