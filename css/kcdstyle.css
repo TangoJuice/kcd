@@ -402,8 +402,14 @@ team.html styling
     padding: 30px;
 }
 .services-images {
-    padding: 30px;
     text-align: center;
+    padding: 30px;
+}
+.services-images img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
 }
 /** css for youtube iframe responsive **/
 .video-container {
