@@ -171,8 +171,8 @@ index.html styling
 }
 .jumbotron-kc > .container-fluid-kc {
     background-image: url('../images/kcdentalphoto.jpg');
-    filter: contrast(180%);
-    filter: brightness(95%);
+    -webkit-filter: contrast(180%) brightness(95%);
+    filter: contrast(180%) brightness(95%);
     background-size: cover;
     background-position: 50% 15%;
     text-align: center;
@@ -260,6 +260,8 @@ blockquote {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
 }
 @media screen and (max-width: 481px) {
@@ -275,6 +277,7 @@ blockquote {
     overflow: visible;
 }
 #carousel-office-tour .carousel-cell:not(.is-selected) img {
+    -webkit-filter: blur(5px) brightness(30%) grayscale(60%);
     filter: blur(5px) brightness(30%) grayscale(60%);
     overflow: hidden;
     position: relative;
@@ -368,6 +371,7 @@ team.html styling
 }
 .carousel-dentists .carousel-cell:not(.is-selected) img,
 .carousel-staff .carousel-cell:not(.is-selected) img {
+    -webkit-filter: blur(2px) brightness(70%) grayscale(100%);
     filter: blur(2px) brightness(70%) grayscale(100%);
     overflow: hidden;
     position: relative;
