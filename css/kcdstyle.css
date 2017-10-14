@@ -202,11 +202,17 @@ index.html styling
 }
 /* end hero styling */
 /* styling for aboutup our office services row */
+@media screen and (min-width: 768px) {
+    .row-aos {
+        display: flex;
+    }
+}
 .aos{
     padding-top: 20px;
     padding-bottom: 50px;
     padding-left: 30px;
     padding-right: 30px;
+    flex-basis: 33%;
 }
 .with-border {
     border: solid beige 8px;
@@ -231,10 +237,12 @@ index.html styling
     visibility:hidden;
     padding:20px;
 }
+.btn-wrapper-fake{
+    clear: both;
+}
 .btn-wrapper{
     padding: 20px;
 }
-
 /* office tour */
 blockquote {
     border: none;

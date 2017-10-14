@@ -135,7 +135,7 @@
     <!-- end slider -->
     <!--aboutus ouroffice newpatients-->
     <div class="container-fluid bg-light">
-      <div class="row grid-columns">
+      <div class="row row-aos">
         <div class="col-md-4 aos shadow">
           <span id="overview" class="offset-anchor"></span>
           <h2 class="text-center"><i aria-hidden="true" class="fa fa-users"></i></h2>
@@ -412,12 +412,12 @@
       <script type="text/javascript">
   $(window).load(function() {
     $(".preload-icon").fadeOut("slow");
-    ResetGridColumns();
     $(".carousel-office-tour").flickity('resize');
     var hash = window.location.hash;
     $(document).scrollTop( $(hash).offset().top );
   });
 $(document).on('click','.navbar-collapse.in',function(e) {
+  ResetGridColumns();
   if( $(e.target).is('a')) {
     $(this).collapse('hide');}
 });
