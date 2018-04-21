@@ -171,8 +171,8 @@ index.html styling
 }
 .jumbotron-kc > .container-fluid-kc {
     background-image: url('../images/kcdentalphoto.jpg');
-    -webkit-filter: contrast(180%) brightness(95%);
-    filter: contrast(180%) brightness(95%);
+    -webkit-filter: contrast(180%) brightness(85%);
+    filter: contrast(180%) brightness(85%);
     background-size: cover;
     background-position: 50% 15%;
     text-align: center;
@@ -184,7 +184,7 @@ index.html styling
 }
 .hero-text-wrapper {
     position: relative;
-    top: 45%;
+    top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
